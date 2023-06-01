@@ -40,7 +40,7 @@ class GetFieldFromSettings:
             ),
 
             'from_alias': (
-                "FROM_ALIAS", 
+                "DEFAULT_FROM_EMAIL", 
                 'noreply<noreply@gmail.com>',
             ),
 
