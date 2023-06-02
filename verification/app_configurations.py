@@ -6,7 +6,16 @@ class GetFieldFromSettings:
     This class fetches the attributes that are defined in settings.py of your project by user OR Django itself.
     self.default_configs : is a dict with keys as the names used in this app and values being a tuple of 
                            attributes defined in settings.py and their corresponding default values if not found.
-    
+                               
+                               self.default_config = {
+                                ...
+                                'field_name_reference': (
+                                    'NAME IN SETTINGS.PY',
+                                    'default value'
+                                ),
+                                ...
+                           }
+
     There is a special case in "get" method, if you set "VERIFICATION_SUCCESS_TEMPLATE" as None is settings.py, it 
     will skip the intermidiate page where success information is displayed. (This is better explained in docs.)
     The "get" method takes the name of the attributes as input, checks for it in settings.py, 
@@ -56,7 +65,8 @@ class GetFieldFromSettings:
 
             'verification_success_msg': (
                 'VERIFICATION_SUCCESS_MSG',
-                "Your Email is verified successfully and account has been activated. You can login with the credentials now..."
+                "Your Email is verified successfully and account has been activated." 
+                "You can login with the credentials now..."
             ),
 
             'verification_failed_template': (
