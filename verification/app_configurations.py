@@ -55,7 +55,7 @@ class GetFieldFromSettings:
 
             'verification_success_redirect': (
                 'LOGIN_URL', 
-                '/'
+                'accounts_login'
             ),
 
             'verification_success_template': (
@@ -74,10 +74,6 @@ class GetFieldFromSettings:
                 'verification/email_verification_failed.html'
             ),
 
-            'verification_failed_redirect': (
-                'VERIFICATION_FAILED_REDIRECT',
-                '/'
-            ),
 
             'verification_failed_msg': (
                 'VERIFICATION_FAILED_MSG',
